@@ -1,0 +1,4 @@
+- reply_type: text
+  text: Oh, hello again! I'm still the Empathy AI bot.
+- reply_type: delay
+  duration: 1

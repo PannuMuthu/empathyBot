@@ -1,0 +1,7 @@
+- reply_type: text
+  text: How are you feeling today?
+  suggestions:
+    - text: Happy
+    - text: Sad
+    - text: Angry
+      

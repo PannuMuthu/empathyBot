@@ -1,0 +1,6 @@
+- reply_type: text
+  text: If you'd like to start over, hit 'restart' below or use the Restart button in the Developer menu
+  buttons:
+    - type: payload
+      text: Restart
+      payload: "restart pressed"

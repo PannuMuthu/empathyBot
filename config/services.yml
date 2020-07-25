@@ -1,0 +1,75 @@
+default: &default
+  # ==========================================
+  # ===== Example Facebook Service Setup =====
+  # ==========================================
+  # facebook:
+  #   verify_token: XXXFACEBOOK_VERIFY_TOKENXXX
+  #   page_access_token: XXXFACEBOOK_ACCESS_TOKENXXX
+  #   setup:
+  #     greeting: # Greetings are broken up by locale
+  #       - locale: default
+  #         text: "Welcome to my Facebook Bot."
+  #     get_started:
+  #       payload: new_user
+  #     persistent_menu:
+  #       - locale: default
+  #         composer_input_disabled: false
+  #         call_to_actions:
+  #         - type: payload
+  #           text: Some Button
+  #           payload: some_button
+  #
+  # ===========================================
+  # ======== Example SMS Service Setup ========
+  # ===========================================
+  # twilio:
+  #   account_sid: XXXTWILIO_ACCOUNT_SIDXXX
+  #   auth_token: XXXTWILIO_AUTH_TOKENXXX
+  #   from_phone: +14155330000
+
+  facebook:
+    verify_token: empathybot
+    page_access_token: EAAIhAqLxMi4BACqbUlXDKE3LnRIyl8Lr5Jv87OPTZA4IAtiNi7dRlh8IWZBZAwIf10kFEXDZAtdvfVq9y9sTcT2dVecJYeBnRFLQf0TgduempNaqlv9pUBMimJQqqSLHHar5JhZBtjtMKOYGyQ9yUDScNfRyj4JwSps78mtTviCJqJSTThGG7
+    setup:
+      greeting: # Greetings are broken up by locale
+        - locale: default
+          text: "Welcome to the Empathy AI chatbot."
+      get_started:
+        payload: new_user
+      persistent_menu:
+        - locale: default
+          composer_input_disabled: false
+          call_to_actions:
+            - type: payload
+              text: Test Button
+              payload: test_button
+              
+production:
+  <<: *default
+  
+development:
+  facebook:
+    verify_token: empathybot
+    page_access_token: EAAIhAqLxMi4BACqbUlXDKE3LnRIyl8Lr5Jv87OPTZA4IAtiNi7dRlh8IWZBZAwIf10kFEXDZAtdvfVq9y9sTcT2dVecJYeBnRFLQf0TgduempNaqlv9pUBMimJQqqSLHHar5JhZBtjtMKOYGyQ9yUDScNfRyj4JwSps78mtTviCJqJSTThGG7
+    setup:
+      greeting: # Greetings are broken up by locale
+        - locale: default
+          text: "Welcome to the Empathy AI chatbot."
+      get_started:
+        payload: new_user
+      persistent_menu:
+        - locale: default
+          composer_input_disabled: false
+          call_to_actions:
+            - type: payload
+              text: Test Button
+              payload: test_button
+            - type: nested
+              text: Developer
+              buttons:
+                - type: payload
+                  text: Restart
+                  payload: developer_restart
+                  
+test:
+  <<: *default

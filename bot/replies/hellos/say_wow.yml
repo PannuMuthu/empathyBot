@@ -1,0 +1,5 @@
+- reply_type: text
+  text: Great! I'm glad you are happy! 🦾
+- reply_type: delay
+  duration: 3
+  
